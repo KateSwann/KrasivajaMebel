@@ -1,0 +1,14 @@
+{
+  "name": "KrasivajaMebel",
+  "description": "",
+  "main": "index.html",
+  "license": "MIT",
+  "homepage": "https://github.com/KateSwann/KrasivajaMebel",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

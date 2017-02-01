@@ -4,9 +4,19 @@
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
 
+        connect: {
+            server: {
+                options: {
+                    port: 9001,
+                    index: 'index.html',
+                    livereload: true
+                }
+            }
+        },
+
         sass: {
             options: {
-                loadPath: ['bower_components/foundation/scss']
+                loadPath: ['node_modules/foundation-sites/scss']
             },
             dist: {
                 options: {
@@ -33,7 +43,7 @@
             },
 
             sass: {
-                files: ["stylesheets/scss/**/*.scss","bower_components/foundation/scss/foundation/*.scss"],
+                files: ["stylesheets/scss/**/*.scss"],
                 tasks: ["buildCss"],
                 options: {
                   livereload: true
@@ -56,10 +66,8 @@
 
             script: {
                 src: [
-                    'bower_components/foundation/js/foundation.js',
-                    'bower_components/foundation/js/foundation/foundation.alert.js',
-                    'bower_components/foundation/js/foundation/foundation.abide.js',
-                    'bower_components/foundation/js/foundation/foundation.joyride.js',
+                    'node_modules/foundation-sites/dist/js/foundation.js',
+                    'node_modules/foundation-sites/js/foundation.abide.js',
                     'js/develop/script.js'
                 ],
                 dest: 'js/assets/script.js'
@@ -67,22 +75,22 @@
 
             modernizr: {
                 src: [
-                    'bower_components/modernizr/modernizr.js',
+                    'node_modules/foundation-sites/vendor/modernizr/modernizr.js',
                     'js/develop/custom.modernizr.js'
                 ],
                 dest: 'js/assets/modernizr.js'
-            }
-        },
+              }
+            },
 
-        sprite:{
-          all: {
-            src: 'images/icons/*.png',
-            dest: 'images/icons/sprites/spritesheet.png',
-            destCss: 'stylesheets/scss/partials/components/_sprites.scss',
-            imgPath: '../../images/icons/sprites/spritesheet.png', // manually setup default path to sprite
-            padding: 2
-          }
-        },
+            // sprite:{
+            //   all: {
+            //     src: 'images/icons/*.png',
+            //     dest: 'images/icons/sprites/spritesheet.png',
+            //     destCss: 'stylesheets/scss/partials/components/_sprites.scss',
+            //     imgPath: '../../images/icons/sprites/spritesheet.png', // manually setup default path to sprite
+            //     padding: 2
+            //   }
+            // },
 
         // --------------------------------------
         // Uglify Configuration
@@ -91,7 +99,7 @@
         uglify: {
             dist: {
                 files: {
-                    'js/assets/jquery.min.js': ['bower_components/jquery/dist/jquery.js'],
+                    'js/assets/jquery.min.js': ['node_modules/foundation-sites/vendor/jquery/dist/jquery.js'],
                     'js/assets/modernizr.min.js': ['js/assets/modernizr.js'],
                     'js/assets/script.min.js': ['js/assets/script.js']
                 }
@@ -107,7 +115,8 @@
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-concat');
-    grunt.loadNpmTasks('grunt-spritesmith');
+    grunt.loadNpmTasks('grunt-contrib-connect');
+    // grunt.loadNpmTasks('grunt-spritesmith');
 
 
     // -----------------------------------------
@@ -116,5 +125,5 @@
 
     grunt.registerTask('buildCss', ['sass']);
     grunt.registerTask('buildJs', ['concat', 'uglify']);
-    grunt.registerTask('default', ['buildCss', 'buildJs', 'watch']);
+    grunt.registerTask('default', ['connect', 'buildCss', 'watch']);
 };
