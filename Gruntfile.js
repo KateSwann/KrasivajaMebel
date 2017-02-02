@@ -67,7 +67,9 @@
             script: {
                 src: [
                     'node_modules/foundation-sites/dist/js/foundation.js',
-                    'node_modules/foundation-sites/js/foundation.abide.js',
+                    'node_modules/foundation-sites/js/foundation.util.keyboard.js',
+                    'node_modules/foundation-sites/js/foundation.util.timerAndImageLoader.js',
+                    'node_modules/foundation-sites/js/foundation.tabs.js',
                     'js/develop/script.js'
                 ],
                 dest: 'js/assets/script.js'
@@ -100,8 +102,7 @@
             dist: {
                 files: {
                     'js/assets/jquery.min.js': ['node_modules/foundation-sites/vendor/jquery/dist/jquery.js'],
-                    'js/assets/modernizr.min.js': ['js/assets/modernizr.js'],
-                    'js/assets/script.min.js': ['js/assets/script.js']
+                    'js/assets/modernizr.min.js': ['js/assets/modernizr.js']
                 }
             }
         }
@@ -125,5 +126,5 @@
 
     grunt.registerTask('buildCss', ['sass']);
     grunt.registerTask('buildJs', ['concat', 'uglify']);
-    grunt.registerTask('default', ['connect', 'buildCss', 'watch']);
+    grunt.registerTask('default', ['connect', 'buildCss', 'buildJs', 'watch']);
 };
