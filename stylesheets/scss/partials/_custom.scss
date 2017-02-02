@@ -3,3 +3,7 @@
 body {
     background-color: white;
 }
+a {
+  width: calc(50% - 2em);
+  transition: transform 1s
+}

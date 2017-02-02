@@ -14,6 +14,14 @@
             }
         },
 
+        autoprefixer: {
+            dist: {
+                files: {
+                    'stylesheets/css/app.autoprefixer.css': 'stylesheets/css/app.css'
+                }
+            }
+        },
+
         sass: {
             options: {
                 loadPath: ['node_modules/foundation-sites/scss']
@@ -34,6 +42,14 @@
         },
 
         watch: {
+            html: {
+                files: ["index.html"],
+                tasks: ["default"],
+                options: {
+                  livereload: true
+                }
+            },
+
             grunt: { 
                 files: ["Gruntfile.js"], 
                 tasks: ["default"],
@@ -117,6 +133,7 @@
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-concat');
     grunt.loadNpmTasks('grunt-contrib-connect');
+    grunt.loadNpmTasks('grunt-autoprefixer');
     // grunt.loadNpmTasks('grunt-spritesmith');
 
 
@@ -124,7 +141,7 @@
     // Register Grunt tasks
     // -----------------------------------------
 
-    grunt.registerTask('buildCss', ['sass']);
+    grunt.registerTask('buildCss', ['sass', 'autoprefixer']);
     grunt.registerTask('buildJs', ['concat', 'uglify']);
     grunt.registerTask('default', ['connect', 'buildCss', 'buildJs', 'watch']);
 };
