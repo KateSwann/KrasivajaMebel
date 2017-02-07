@@ -56,9 +56,11 @@ $foundation-palette: (
   success: #3adb76,
   warning: #ffae00,
   alert: #cc4b37,
-  accent: #8066CE,
 );
 
+$color-main: #FF5959; // coral
+$color-accent: #8066CE; // velvet
+$color-neutral: #F2F2F2; // greyish biege
 
 $light-gray: #e6e6e6;
 $medium-gray: #cacaca;
@@ -466,20 +468,20 @@ $orbit-control-zindex: 10;
 // 26. Pagination
 // --------------
 
-$pagination-font-size: rem-calc(14);
+$pagination-font-size: rem-calc(18);
 $pagination-margin-bottom: $global-margin;
-$pagination-item-color: $primary-color;
-$pagination-item-padding: rem-calc(3 10);
-$pagination-item-spacing: rem-calc(1);
+$pagination-item-color: $color-main;
+$pagination-item-padding: rem-calc(20 30);
+$pagination-item-spacing: rem-calc(-4);
 $pagination-radius: $global-radius;
 $pagination-item-background-hover: $light-gray;
-$pagination-item-background-current: $primary-color;
-$pagination-item-color-current: $white;
+$pagination-item-background-current: $white;
+$pagination-item-color-current: $color-accent;
 $pagination-item-color-disabled: $medium-gray;
 $pagination-ellipsis-color: $black;
-$pagination-mobile-items: false;
-$pagination-mobile-current-item: false;
-$pagination-arrows: true;
+$pagination-mobile-items: true;
+$pagination-mobile-current-item: true;
+$pagination-arrows: false;
 
 // 27. Progress Bar
 // ----------------

@@ -154,5 +154,5 @@
 
     grunt.registerTask('buildCss', ['sass', 'autoprefixer']);
     grunt.registerTask('buildJs', ['concat', 'uglify']);
-    grunt.registerTask('default', ['connect', 'babel', 'buildCss', 'buildJs', 'watch']);
+    grunt.registerTask('default', ['connect', 'buildCss', 'buildJs', 'watch']);
 };
