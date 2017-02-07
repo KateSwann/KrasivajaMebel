@@ -1,0 +1,1 @@
+{"version":3,"sources":["../develop/script.js"],"names":["$","document","foundation"],"mappings":"aACAA,EAAEC,QAAF,EAAYC,UAAZ","file":"script.js","sourcesContent":["\n$(document).foundation();"]}

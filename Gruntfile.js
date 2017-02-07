@@ -4,6 +4,17 @@
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
 
+        babel: {
+            options: {
+              sourceMap: true
+            },
+            dist: {
+              files: {
+                'js/assets/script.js': ['js/develop/script.js']
+              }
+            }
+        },
+
         connect: {
             server: {
                 options: {
@@ -18,7 +29,8 @@
             dist: {
                 files: {
                     'stylesheets/css/app.autoprefixer.css': 'stylesheets/css/app.css'
-                }
+                },
+                browsers: ['last 2 versions', 'ie >= 9', 'and_chr >= 2.3']
             }
         },
 
@@ -83,9 +95,6 @@
             script: {
                 src: [
                     'node_modules/foundation-sites/dist/js/foundation.js',
-                    'node_modules/foundation-sites/js/foundation.util.keyboard.js',
-                    'node_modules/foundation-sites/js/foundation.util.timerAndImageLoader.js',
-                    'node_modules/foundation-sites/js/foundation.tabs.js',
                     'js/develop/script.js'
                 ],
                 dest: 'js/assets/script.js'
@@ -118,6 +127,7 @@
             dist: {
                 files: {
                     'js/assets/jquery.min.js': ['node_modules/foundation-sites/vendor/jquery/dist/jquery.js'],
+                    'js/assets/script.min.js': ['js/assets/script.js'],
                     'js/assets/modernizr.min.js': ['js/assets/modernizr.js']
                 }
             }
@@ -134,6 +144,7 @@
     grunt.loadNpmTasks('grunt-contrib-concat');
     grunt.loadNpmTasks('grunt-contrib-connect');
     grunt.loadNpmTasks('grunt-autoprefixer');
+    // grunt.loadNpmTasks('grunt-babel');
     // grunt.loadNpmTasks('grunt-spritesmith');
 
 
@@ -143,5 +154,5 @@
 
     grunt.registerTask('buildCss', ['sass', 'autoprefixer']);
     grunt.registerTask('buildJs', ['concat', 'uglify']);
-    grunt.registerTask('default', ['connect', 'buildCss', 'buildJs', 'watch']);
+    grunt.registerTask('default', ['connect', 'babel', 'buildCss', 'buildJs', 'watch']);
 };
