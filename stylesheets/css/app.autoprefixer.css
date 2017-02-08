@@ -1420,9 +1420,9 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: Lato, "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+  font-family: Gilroy, "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
   font-style: normal;
-  font-weight: normal;
+  font-weight: 800;
   color: inherit;
   text-rendering: optimizeLegibility; }
   h1 small,
@@ -4031,3 +4031,19 @@ body {
   font-weight: 900;
   font-style: italic; }
 /* END Black Italic */
+/* BEGIN Light */
+@font-face {
+  font-family: "Gilroy";
+  src: url("../../fonts/Gilroy/Light/Gilroy-Light.eot");
+  src: url("../../fonts/Gilroy/Light/Gilroy-Light.eot") format("embedded-opentype"), url("../../fonts/Gilroy/Light/Gilroy-Light.woff2") format("woff2"), url("../../fonts/Gilroy/Light/Gilroy-Light.woff") format("woff"), url("../../fonts/Gilroy/Light/Gilroy-Light.ttf") format("truetype"), url("../../fonts/Gilroy/Light/Gilroy-Light.svg") format("svg");
+  font-weight: 300;
+  font-style: normal; }
+/* END Light */
+/* BEGIN Black */
+@font-face {
+  font-family: "Gilroy";
+  src: url("../../fonts/Gilroy/Black/Gilroy-Black.eot");
+  src: url("../../fonts/Gilroy/Black/Gilroy-Black.eot") format("embedded-opentype"), url("../../fonts/Gilroy/Black/Gilroy-Black.woff2") format("woff2"), url("../../fonts/Gilroy/Black/Gilroy-Black.woff") format("woff"), url("../../fonts/Gilroy/Black/Gilroy-Black.ttf") format("truetype"), url("../../fonts/Gilroy/Black/Gilroy-Black.svg") format("svg");
+  font-weight: 900;
+  font-style: normal; }
+/* END Black */

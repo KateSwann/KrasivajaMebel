@@ -53,9 +53,11 @@
 
 
 // --------------- fonts ---------------
+
+// Lato
 @import
-		"partials/fonts/Lato/variables",
-		"partials/fonts/Lato/mixins",
+		"partials/fonts/Lato/lato-variables",
+		"partials/fonts/Lato/lato-mixins",
 		"partials/fonts/Lato/Hairline",
 		"partials/fonts/Lato/HairlineItalic",
 		"partials/fonts/Lato/Light",
@@ -67,6 +69,12 @@
 		"partials/fonts/Lato/Black",
 		"partials/fonts/Lato/BlackItalic";
 
+// Gilroy
+@import
+		"partials/fonts/Gilroy/gilroy-variables",
+		"partials/fonts/Gilroy/gilroy-mixins",
+		"partials/fonts/Gilroy/Light",
+		"partials/fonts/Gilroy/Black";
 
 
 
