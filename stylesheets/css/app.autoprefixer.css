@@ -3265,7 +3265,7 @@ select {
     color: #FF5959; }
     .pagination a:hover,
     .pagination button:hover {
-      background: #e6e6e6; }
+      background: #F2F2F2; }
   .pagination .current {
     padding: 1.25rem 1.875rem;
     background: #fefefe;
@@ -3739,16 +3739,16 @@ table.hover:not(.unstriped) tr:nth-of-type(even):hover {
   float: left; }
   .tabs-title > a {
     display: block;
-    padding: 1.25rem 1.5rem;
-    font-size: 0.75rem;
+    padding: 1.1rem 2.5rem;
+    font-size: 1.125rem;
     line-height: 1;
-    color: #2199e8; }
+    color: #797979; }
     .tabs-title > a:hover {
       background: #fefefe;
-      color: #1585cf; }
+      color: #686868; }
     .tabs-title > a:focus, .tabs-title > a[aria-selected='true'] {
-      background: #e6e6e6;
-      color: #2199e8; }
+      background: #F9F9F9;
+      color: #0a0a0a; }
 
 .tabs-content {
   border: 1px solid #e6e6e6;
@@ -3991,6 +3991,19 @@ body {
     color: #FF5959;
     cursor: default;
     border-bottom: 4px solid #FF5959; }
+
+/* ------------------ Tabs ------------- */
+.tabs {
+  border: none; }
+
+.tabs-title {
+  width: 50%;
+  border-bottom: 2px solid transparent; }
+  .tabs-title.is-active {
+    border-color: #D8D8D8; }
+  .tabs-title > a {
+    font-weight: 600;
+    text-align: center; }
 
 /* BEGIN Hairline */
 @font-face {
