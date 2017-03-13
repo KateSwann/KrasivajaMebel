@@ -1,0 +1,24 @@
+/* ------------------ Menu ------------- */
+$site-nav-menu-item-margin: 0 1.1rem;
+$site-nav-menu-item-padding: 1.6rem 0;
+
+.site-nav-menu {
+    @include menu-base;
+
+    font-weight: 600;
+    font-size: rem-calc(18);
+    
+    // Reset line height to make the height of the overall item easier to calculate
+    > li > a {
+      margin: $site-nav-menu-item-margin;
+      padding: $site-nav-menu-item-padding;
+      border-bottom: 4px solid transparent;
+    }
+
+    // Active state
+    .active > a {
+      border-bottom-color: $color-main;
+      color: $color-main;
+    }
+
+}

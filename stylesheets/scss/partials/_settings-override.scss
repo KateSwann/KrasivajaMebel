@@ -61,11 +61,13 @@ $foundation-palette: (
 
 $color-main: #FF5959; // coral
 $color-accent: #8066CE; // velvet
+$color-info: #FFFB82; // velvet
 $color-neutral: #F2F2F2; // greyish biege
 
 $light-gray: #e6e6e6;
-$medium-gray: #cacaca;
+$medium-gray: #939393;
 $dark-gray: #8a8a8a;
+$dusty-gray: #F9F9F9;
 $black: #0a0a0a;
 $white: #fefefe;
 $body-background: $white;
@@ -152,8 +154,8 @@ $code-font-weight: $global-weight-normal;
 $code-background: $light-gray;
 $code-border: 1px solid $medium-gray;
 $code-padding: rem-calc(2 5 1);
-$anchor-color: $primary-color;
-$anchor-color-hover: scale-color($anchor-color, $lightness: -14%);
+$anchor-color: $color-accent;
+$anchor-color-hover: scale-color($color-accent, $lightness: -14%);
 $anchor-text-decoration: none;
 $anchor-text-decoration-hover: none;
 $hr-width: $global-width;
@@ -240,12 +242,12 @@ $badge-font-size: 0.6rem;
 // ---------------
 
 $breadcrumbs-margin: 0 0 $global-margin 0;
-$breadcrumbs-item-font-size: rem-calc(11);
-$breadcrumbs-item-color: $primary-color;
-$breadcrumbs-item-color-current: $black;
-$breadcrumbs-item-color-disabled: $medium-gray;
-$breadcrumbs-item-margin: 0.75rem;
-$breadcrumbs-item-uppercase: true;
+$breadcrumbs-item-font-size: rem-calc(16);
+$breadcrumbs-item-color: $color-accent;
+$breadcrumbs-item-color-current: $medium-gray;
+$breadcrumbs-item-color-disabled: $light-gray;
+$breadcrumbs-item-margin: 0.2rem;
+$breadcrumbs-item-uppercase: false;
 $breadcrumbs-item-slash: true;
 
 // 11. Button
@@ -573,7 +575,7 @@ $show-header-for-stacked: false;
 // --------
 
 $tab-margin: 0;
-$tab-background: $white;
+$tab-background: $dusty-gray;
 $tab-color: $primary-color;
 $tab-background-active: $light-gray;
 $tab-active-color: $primary-color;
