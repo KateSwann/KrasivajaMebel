@@ -2,6 +2,8 @@
 $site-nav-menu-item-margin: 0 1.1rem;
 $site-nav-menu-item-padding: 1.6rem 0;
 
+$sub-footer-menu-margin: 0 0 1.6rem;
+
 .site-nav-menu {
     @include menu-base;
 
@@ -21,4 +23,20 @@ $site-nav-menu-item-padding: 1.6rem 0;
       color: $color-main;
     }
 
+}
+
+.sub-footer-menu {
+  @include menu-simple;
+
+  margin: $sub-footer-menu-margin;
+  font-size: rem-calc(18);
+  font-weight: 600;
+
+  text-align: justify;
+  text-justify: newspaper; 
+  text-align-last: justify;
+
+  li {margin-right: 0;}
+
+  a {color: $medium-gray;}
 }

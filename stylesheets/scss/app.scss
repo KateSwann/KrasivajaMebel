@@ -47,6 +47,11 @@
 @import "partials/custom";
 
 
+// --------------- base ---------------------
+@import
+        "partials/base/typography.scss";
+
+
 // --------------- components ---------------
 @import
         "partials/components/label.scss",
@@ -55,7 +60,7 @@
         "partials/components/tabs.scss";
 
 
-// --------------- fonts ---------------
+// --------------- fonts -------------------
 
 // Lato
 @import
@@ -78,6 +83,11 @@
 		"partials/fonts/Gilroy/gilroy-mixins",
 		"partials/fonts/Gilroy/Light",
 		"partials/fonts/Gilroy/Black";
+
+
+// --------------- layout ------------------
+@import
+        "partials/layout/footer.scss";
 
 
 

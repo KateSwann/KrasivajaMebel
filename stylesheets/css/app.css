@@ -1518,7 +1518,7 @@ li {
 
 ul {
   margin-left: 1.25rem;
-  list-style-type: disc; }
+  list-style-type: none; }
 
 ol {
   margin-left: 1.25rem; }
@@ -3836,6 +3836,10 @@ a.thumbnail {
 body {
   background-color: white; }
 
+/* ---------------- Fonts and typography ----------------*/
+.initial-letter-red::first-letter {
+  border-bottom: 4px solid #FF5959; }
+
 /* ------------------ Labels ------------- */
 .label {
   font-weight: 900;
@@ -3877,6 +3881,24 @@ body {
   .site-nav-menu .active > a {
     border-bottom-color: #FF5959;
     color: #FF5959; }
+
+.sub-footer-menu {
+  margin: 0 0 1.6rem;
+  font-size: 1.125rem;
+  font-weight: 600;
+  text-align: justify;
+  text-justify: newspaper;
+  text-align-last: justify; }
+  .sub-footer-menu li {
+    display: inline-block;
+    margin-right: 1rem;
+    line-height: 1; }
+  .sub-footer-menu a {
+    padding: 0; }
+  .sub-footer-menu li {
+    margin-right: 0; }
+  .sub-footer-menu a {
+    color: #939393; }
 
 /* ------------------ Pagination ------------- */
 .pagination {
@@ -4004,3 +4026,28 @@ body {
   font-weight: 900;
   font-style: normal; }
 /* END Black */
+/* ---------------- Footer ----------------*/
+.footer {
+  background-color: #F2F2F2;
+  padding: 3.75rem 0; }
+
+.footer-links-group ul {
+  margin: 0; }
+.footer-links-group li {
+  margin-bottom: 0.9375rem; }
+.footer-links-group li,
+.footer-links-group li a {
+  color: #0a0a0a;
+  font-size: 1rem;
+  line-height: 1.1; }
+.footer-links-group .list-header {
+  margin-bottom: 1.875rem; }
+.footer-links-group .list-header,
+.footer-links-group .list-header a {
+  font-size: 1.125rem; }
+
+.sub-footer {
+  background-color: #fefefe;
+  color: #939393;
+  min-height: 9.375rem;
+  padding: 2.5rem 0; }
